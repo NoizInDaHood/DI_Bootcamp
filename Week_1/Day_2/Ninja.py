@@ -28,4 +28,6 @@ while True:
         print(f"\n\nSolid effort ({current_length} chars), but you didn't beat {highest_record}.")
         print("\n\nTry again to beat the highest score!\nOr type 'exit' to quit.")
 
+    
+
         
