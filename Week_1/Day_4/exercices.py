@@ -121,4 +121,56 @@ for x in range(1,21):
         print(x)
 
 
+"""Exercise 6: While Loop
+Key Python Topics:
 
+Loops (while)
+Conditionals
+
+
+Instructions:
+
+Use an input to ask the user to enter their name.
+Using a while True loop, check if the user gave a proper name (not digits and at least 3 letters long)
+hint: check for the method isdigit()
+if the input is incorrect, keep asking for the correct input until it is correct
+if the input is correct print “thank you” and break the loop"""
+
+
+
+name = input("Enter your name: ")
+
+while True:
+    if len(name) < 3 or not name.isalpha(): # I use the isalpha method to check if the name contains only letters and no digits. # I also check if the length of the name is less than 3 characters. #
+        name = input("Please enter a valid name (at least 3 letters and no digits): ")
+    else: # if the name is valid, I print thank you and break the loop. #
+        print("Thank you very much!")
+        break
+
+
+""" Exercise 7: Favorite Fruits
+Key Python Topics:
+
+Input/output
+Strings and lists
+Conditionals
+
+
+Instructions:
+
+Ask the user to input their favorite fruits (they can input several fruits, separated by spaces).
+Store these fruits in a list.
+Ask the user to input the name of any fruit.
+If the fruit is in their list of favorite fruits, print:
+"You chose one of your favorite fruits! Enjoy!"
+If not, print:
+"You chose a new fruit. I hope you enjoy it!" """
+
+fruits_list = input("Type all your favorite fruits: ").lower().split() # I use the split method to split the input into a list of fruits. #
+
+any_fruit = input("Type any fruit:").lower() # I use the lower method to make sure that the comparison is not case sensitive. #
+
+if any_fruit in fruits_list: # I use the in keyword to check if the any_fruit is in the fruits_list and I use the lower method to make sure that the comparison is not case sensitive. #
+    print("You chose one of your favorite fruits! Enjoy!")
+else:
+    print("You chose a new fruit. I hope you enjoy it!")
