@@ -1,26 +1,37 @@
-""" Exercise 7: Favorite Fruits
+""" Exercise 8: Pizza Toppings
+
 Key Python Topics:
 
-Input/output
-Strings and lists
-Conditionals
+Loops
+Lists
+String formatting
 
 
 Instructions:
 
-Ask the user to input their favorite fruits (they can input several fruits, separated by spaces).
-Store these fruits in a list.
-Ask the user to input the name of any fruit.
-If the fruit is in their list of favorite fruits, print:
-"You chose one of your favorite fruits! Enjoy!"
-If not, print:
-"You chose a new fruit. I hope you enjoy it!" """
+Write a loop that asks the user to enter pizza toppings one by one.
+Stop the loop when the user types 'quit'.
+For each topping entered, print:
+"Adding [topping] to your pizza."
+After exiting the loop, print all the toppings and the total cost of the pizza.
+The base price is $10, and each topping adds $2.50. """
 
-fruits_list = input("Type all your favorite fruits: ").lower().split()
+print("\nEnter pizza toppings one by one.\n\nPIZZA COST $10\n\nEach topping cost $2,50\n")
+print("\n\nType 'quit' when you are done\n")
 
-any_fruit = input("Type any fruit:").lower()
+total_topping = []
+base_cost = 10
 
-if any_fruit in fruits_list:
-    print("You chose one of your favorite fruits! Enjoy!")
-else:
-    print("You chose a new fruit. I hope you enjoy it!")
+
+while True:
+    new_topping = input("Add your topping or type 'exit' to finish: ")
+    if new_topping.lower() == "exit":
+        total_cost = base_cost + (len(total_topping) * 2.5)
+        print(f"\nThanks for your order!\n\nThe total price is ${total_cost}. ")
+        print(f"Details:\nPizza base: $10\n +{total_topping}: ${len(total_topping) * 2.5:.2f}")
+        break
+    else:
+        total_topping.append(new_topping)
+        print(f"\n\nYou added {new_topping}")
+
+
