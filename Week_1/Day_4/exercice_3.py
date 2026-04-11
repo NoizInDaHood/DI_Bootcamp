@@ -1,68 +1,30 @@
-""" Exercise 9: Cinemax Tickets
-Key Python Topics:
+"""Write a program that prints the frequency of the words from the input.
 
-Conditionals
-Lists
-Loops
+Suppose the following input is supplied to the program:
+New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
 
+Then, the output should be:
 
-Instructions:
+    2:2
+    3.:1
+    3?:1
+    New:1
+    Python:5
+    Read:1
+    and:1
+    between:1
+    choosing:1
+    or:2
+    to:1 """
 
-Ask for the age of each person in a family who wants to buy a movie ticket.
-Calculate the total cost based on the following rules:
-Free for people under 3.
-$10 for people aged 3 to 12.
-$15 for anyone over 12.
-Print the total ticket cost.
+paragraph = ("Le numéro 2 mondial Jannik Sinner s'est qualifié pour la finale du Masters 1000 de Monte-Carlo, la troisième en autant de tournois de cette catégorie cette année, en éliminant facilement l'Allemand Alexander Zverev (6-1, 6-4). L'Italien de 24 ans est le premier à se hisser trois fois en finale lors des trois premiers Masters 1000 de l'année depuis Novak Djokovic en 2015. Il pourrait retrouver en finale en Principauté le numéro 1 mondial et tenant du titre Carlos Alcaraz, qui affronte samedi après-midi le Monégasque Valentin Vacherot (23e). Il s'agirait de la première confrontation entre les deux meilleurs joueurs du monde cette saison.")
+words = paragraph.split()
+frequency = {}
+for word in words:
+    if word in frequency:
+        frequency[word] += 1
+    else:
+        frequency[word] = 1
 
-
-Bonus:
-
-Imagine a group of teenagers wants to see a restricted movie (only for ages 16–21).
-Write a program to:
-Ask for each person’s age.
-Remove anyone who isn’t allowed to watch.
-Print the final list of attendees. """
-
-how_much = []
-#how_many = int(input("\n\nHow many ticket would you like?: ")) # I ask the user how many tickets they want to buy and I convert the input to an integer. #
-# I use a for loop to iterate through the number of tickets and ask for the age of each person. I then use if-elif statements to determine the cost of each ticket based on the age and append the cost to the how_much list. Finally, I print the total cost by summing the how_much list. #
-#for i in range(how_many):
-#    input_age = int(input(f"\nType the age of the person {i+1}: "))# I ask for the age of each person and convert the input to an integer. #
-#    if input_age < 3:
-#        print("The ticket is free for this person.")
-#        how_much.append(0) # I use the fonction append to add the cost of the ticket to the how_much list. #
-#    elif input_age <13:
-#        print("$10 for people aged 3 to 12.")
-#        how_much.append(10)
-#    elif input_age > 12:
-#        print("$15 for people over the age 12.")
-#        how_much.append(15)   
-# I use the sum function to calculate the total cost of the tickets by summing the values in the how_much list. I then print the total cost. #
-#print(f"\n\nThe total cost of the tickets is: ${sum(how_much)}")
-
-""" Bonus: Imagine a group of teenagers wants to see a restricted movie (only for ages 16–21).""" 
-
-identity = {}
-number_of_people = int(input("\n\nHow many people are in the group? ")) # I ask the user how many people are in the group and convert the input to an integer. #
-
-for i in range(number_of_people):
-    name = input("\nPlease type your full name: ")
-    age = int(input("\nWhat is your age?: "))
-    identity[name] = age
-
-authorized_people = {name: age for name, age in identity.items() if 16 <= age <=21}
-
-print(f"Here are the people authorized to watch the movie: {list(authorized_people.keys())}")
-
-
-
-
-
-
-
-
-
-
-
-
+for word, count in frequency.items():
+    print(f"{word}:{count}")
