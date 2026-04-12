@@ -1,30 +1,34 @@
-"""Write a program that prints the frequency of the words from the input.
+""" Key Python Topics:
+input() function
+Strings and string manipulation
+Loops (for or while)
+Conditional statements (if)
 
-Suppose the following input is supplied to the program:
-New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
 
-Then, the output should be:
+Instructions:
+1. Ask the user for a string.
+2. Write a program that processes the string to remove consecutive duplicate letters.
 
-    2:2
-    3.:1
-    3?:1
-    New:1
-    Python:5
-    Read:1
-    and:1
-    between:1
-    choosing:1
-    or:2
-    to:1 """
+The new string should only contain unique consecutive letters.
+For example, “ppoeemm” should become “poem” (removes consecutive duplicates like ‘pp’, ‘ee’, and ‘mm’).
+3. The program should print the modified string. """
 
-paragraph = ("Le numéro 2 mondial Jannik Sinner s'est qualifié pour la finale du Masters 1000 de Monte-Carlo, la troisième en autant de tournois de cette catégorie cette année, en éliminant facilement l'Allemand Alexander Zverev (6-1, 6-4). L'Italien de 24 ans est le premier à se hisser trois fois en finale lors des trois premiers Masters 1000 de l'année depuis Novak Djokovic en 2015. Il pourrait retrouver en finale en Principauté le numéro 1 mondial et tenant du titre Carlos Alcaraz, qui affronte samedi après-midi le Monégasque Valentin Vacherot (23e). Il s'agirait de la première confrontation entre les deux meilleurs joueurs du monde cette saison.")
-words = paragraph.split()
-frequency = {}
-for word in words:
-    if word in frequency:
-        frequency[word] += 1
-    else:
-        frequency[word] = 1
+user_string = input("\nPlease type any word or sentence: ")
 
-for word, count in frequency.items():
-    print(f"{word}:{count}")
+
+def remove_duplicate(): 
+    internal_result = []
+    for i in range(len(user_string) - 1):
+        if user_string[i] == user_string[i+1]:
+            continue
+        else:
+            internal_result.append(user_string[i])
+    internal_result.append(user_string[-1])
+    string_result = "".join(internal_result)
+    return string_result
+
+cleaned_string = remove_duplicate()
+print(cleaned_string)
+user_string = input("\nPlease type any word or sentence: ")
+cleaned_string = remove_duplicate()
+print(cleaned_string)
