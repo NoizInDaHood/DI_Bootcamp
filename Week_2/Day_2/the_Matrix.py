@@ -128,9 +128,16 @@ for col in range(len(matrix_2D_list[0])):
     temp_string = ""
     for row in range(len(matrix_2D_list)):
         char = matrix_2D_list[row][col]
-        if char.isalpha():
-            decoded_message += char
-        else:
-            decoded_message += " "
+        decoded_message += char
+print(decoded_message)
+read_decoded = ""
+for character in range(len(decoded_message)):
+    if decoded_message[character].isalpha():
+        read_decoded += decoded_message[character]
+    else:
+        if read_decoded and not read_decoded.endswith(" "):
+            read_decoded += " "
 
-print(decoded_message.strip())
+print(read_decoded)
+        
+
