@@ -1,4 +1,4 @@
-const board = document.getElementById('boardGrid');
+ const board = document.getElementById('boardGrid');
 const numberOfSquare = 6500;
 let selectColor = "black";
 let isDrawing = false;
