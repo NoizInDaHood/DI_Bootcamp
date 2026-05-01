@@ -36,7 +36,7 @@ The output should be :
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercice 2</title>
 </head>
 <body>
   <form>
@@ -46,6 +46,34 @@ The output should be :
   <input type="text" id="lname" name="lastname"><br><br>
   <input type="submit" value="Submit" id="submit">
 </form> 
-<ul class="usersAnswer"></ul> 
+<ul class="usersAnswer"></ul>
+
+<script>
+    const form = document.querySelector("form");
+    console.log(form);
+    const inputById = document.querySelectorAll("#fname, #lname");
+    console.log(inputById);
+    const inputByName = document.querySelectorAll("[name='lastname'],[name='firstname']");
+    console.log(inputByName);
+    
+    form.addEventListener("submit", (ev) => {
+        // I use prevent defaut to prevent from the automatic refresh due to the native html/ form process
+        ev.preventDefault();
+        const firstName = document.getElementById("fname").value;
+        const lastName = document.getElementById("lname").value;
+        const list = document.getElementsByClassName("usersAnswer")[0];
+        if (firstName != "") {
+            const answerFirstName = document.createElement("li");
+            answerFirstName.textContent = firstName;
+            list.appendChild(answerFirstName);
+        }
+        if (lastName != "") {
+            const answerLastName = document.createElement("li");
+            answerLastName.textContent = lastName;
+            list.appendChild(answerLastName);
+        }
+
+    })
+</script>
 </body>
 </html>
