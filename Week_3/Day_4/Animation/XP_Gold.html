@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <select id="genres">
+     <option value="rock">Rock</option>
+     <option value="blues" selected>Blues</option>
+   </select>
+
+
+ <script>
+    const selected = document.querySelector("#genres").value;
+    alert(selected);
+ </script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+    </select>
+    <input type="button" value="Select and Remove">
+</form>
+
+<script>
+    const list = document.getElementById("colorSelect");
+    const btnDel = document.querySelector("input[type='button']");
+    function removecolor() {
+        const selectedColor = list.options[list.selectedIndex];
+        list.removeChild(selectedColor);
+        };
+    btnDel.addEventListener("click", (ev) => {
+        removecolor();
+    });
+
+
+</script>
+</body>
+</html>
