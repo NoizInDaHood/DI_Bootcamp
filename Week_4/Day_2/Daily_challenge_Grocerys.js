@@ -62,5 +62,4 @@ const cloneGroceries = () => {
 displayGroceries();
 
 cloneGroceries();
-cloneGroceries();
 
