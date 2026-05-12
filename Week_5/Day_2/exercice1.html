@@ -1,0 +1,52 @@
+<!-- 
+Create a form like the one above. The form should contain three inputs:
+a small text input asking for a name,
+a larger textarea input to write a message,
+a submit input (“Send”)
+
+When you click the Send button, the form will be submitted with a GET method. (you can use the same HTML file for the action url)
+Where will the sent data appear? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+
+        }
+        .container {
+            position: absolute; /* ou fixed */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;   
+        }
+        .form {
+            gap: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container" id="container">
+    <form id="form" action="exercice1.html" method="GET">
+        <label for="firstName">First name:</label><br>
+        <input id="firstName" type="text" name="firstName" placeholder="John"><br>
+        <label for="comments">Comments</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="30" placeholder="Hello this is a comment"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+    </section>
+
+</body>
+</html>
+
+<!-- With method="GET", the form data appears in the URL.
+action="exercice1.html" sends the form to exercice1.html.
+Without action, the form submits to the current page by default. -->
