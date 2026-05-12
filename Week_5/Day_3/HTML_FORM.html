@@ -1,0 +1,57 @@
+<!-- Instructions
+Create a form with two fields (name, last name) and a submit button.
+When you click the Send button, retrieve the data from the inputs, and append it on the DOM as a JSON string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM</title>
+    <style>
+        .container {
+            position: absolute; /* ou fixed */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+
+        }
+        .form {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <container class="container">
+        <form id="form" class="form" action="HTML_FORM.html">
+            <input type="text" id="firstName" class="firstName" name="firstName" placeholder="John">
+            <input type="text" id="lastName" class=lasttName" name="lastName" placeholder="Doe">
+            <button type="submit">Submit</button>
+            <p id="output"></p>
+            
+        </form>
+    </container>
+
+
+
+    <script>
+        const form = document.getElementById("form");
+        const output = document.getElementById("output");
+
+        form.addEventListener("submit", ev =>{
+            ev.preventDefault();
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const user = {
+                firstName,
+                lastName,       
+            };
+            const jsonString = JSON.stringify(user);
+            output.textContent = jsonString;
+        })
+    </script>
+</body>
+</html>
