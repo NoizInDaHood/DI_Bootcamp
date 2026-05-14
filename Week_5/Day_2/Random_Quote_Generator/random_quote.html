@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        .section {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            gap: 5px;
+            background: rgb(249, 211, 135);
+            width: max-content;
+            height: 475px;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .btnQuote {
+            display: block;
+            margin: 50px auto;
+            padding: 10px 15px 10px 15px;
+            border-radius: 10px;
+            width: auto;
+            background-color: burlywood;
+            color:aliceblue;
+            border: none;
+            border-right: 1px solid rgba(0, 0, 0, 0.592);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.592);
+            font-size: 18px;
+            font-weight: bold;
+            font-family: verdana;
+            cursor: pointer;
+        }
+        .quoteBox {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            align-content: center;
+            align-items: center;
+        }
+        .quote {
+            width: 350px;
+            font-family: 'Times New Roman';
+            font-size: 22px;
+            font-weight: 500;
+            text-justify: center;
+        }
+        .author {
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+            color:blueviolet;
+        }
+        .buttons-collection {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btnChoice {
+            padding: 7px 13px 7px 13px;
+            border-radius: 6px;
+            background-color: rgb(201, 110, 25);
+            color:aliceblue;
+            border: none;
+            font-size: 12px;
+            font-family: verdana;
+            cursor: pointer;
+        }
+        .btnLike {
+            padding: 7px 13px 7px 13px;
+            border-radius: 6px;
+            background-color: rgb(34, 170, 21);
+            color:rgb(233, 237, 233);
+            border: none;
+            font-size: 12px;
+            font-family: verdana;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .result {
+            display: flex;
+            justify-content: center;
+            visibility: hidden;
+        }
+        .buttons-collection {
+            display: flex;
+            flex-direction: row;
+
+        }
+        .likeSymb {
+            display: none;
+            position: absolute;
+            left: 350px;
+            top: -7px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: linear-gradient(white, pink);
+            align-items: center;
+            justify-content: center;
+            border: 1px solid palevioletred;
+        }
+
+    </style>
+</head>
+<body>
+    <button type="button" class="btnQuote" id="btnQuote">Get a quote</button>
+    <section class="section" id="section">
+        <div class="quoteBox" id="quoteBox">
+            <p class="quote" id="quote">Exemple</p>
+            <p class="likeSymb" id="likeSymb">❤️</p>
+        </div>
+            <p class="author" id="author"></p>
+            <p class="result" id="result">Example of result that could be displayed here</p>
+        <nav class="buttons-collection" id="btnCollection">
+            <button type="button" class="btnChoice" id="numbCharWithSpace">Number of characters including space</button>
+            <button type="button" class="btnChoice" id="numbCharNoSpace">Number of characters without space</button>
+            <button type="button" class="btnChoice" id="numbWords">Number of words in the quote</button>
+            <button type="button" class="btnLike" id="likeBtn">❤️ Like this quote</button>
+        </nav>
+        <form class="form" id="form">
+            
+        </form>
+    </section>
+
+    <script>
+        const quotes = [
+            {
+                id: 0,
+                sentence: "I refuse to join any club that would have me as a member.",
+                author: "Groucho Marx",
+            },
+            {
+                id: 1,
+                sentence: "It takes considerable knowledge just to realize the extent of your own ignorance.",
+                author: "Thomas Sowell",
+            },
+            {
+                id: 2,
+                sentence: "I would never die for my beliefs because I might be wrong.",
+                author: "Bertrand Russel"
+            },
+            {
+                id: 3,
+                sentence: "If a book about failures doesn't sell, is it a success?",
+                author: "Jerry Seinfeld",
+            },
+            {
+                id: 4,
+                sentence: "Don't be so humble - you are not that great.",
+                author: "Golda Meir",
+            },
+            {
+                id: 5,
+                sentence:"Always go to other people's funerals, otherwise they won't come to yours.",
+                author: "Yogi Berra",
+            },
+        ]
+        const quote = document.getElementById("quote");
+        const btnQuote = document.getElementById("btnQuote");
+        const author = document.getElementById("author");
+        const section = document.getElementById("section");
+        const likeSymb = document.getElementById("likeSymb");
+        let lastQuoteDisplayed;
+        let lastIdQuoteDisplayed;
+        btnQuote.addEventListener("click", ev =>{
+            ev.preventDefault();
+            let randomizedQuote = Math.floor(Math.random() * quotes.length);
+            while (quotes[randomizedQuote].sentence === lastQuoteDisplayed) {
+                randomizedQuote = Math.floor(Math.random() * quotes.length)
+            };
+            quote.textContent = `"${quotes[randomizedQuote].sentence}"`;
+            author.textContent = quotes[randomizedQuote].author;
+            lastQuoteDisplayed = quotes[randomizedQuote].sentence;
+            lastIdQuoteDisplayed = quotes[randomizedQuote].id;
+            section.style.display = "flex";
+            result.style.visibility = "hidden";
+            if (quotes[randomizedQuote].id in quoteLiked){
+                likeSymb.style.display = "flex";
+            }else{
+                likeSymb.style.display = "none";
+            };
+        });
+        const btnCharWithSpace = document.getElementById("numbCharWithSpace");
+        const btnCharNoSpace = document.getElementById("numbCharNoSpace");
+        const numbWords = document.getElementById("numbWords");
+        const likeBtn = document.getElementById("likeBtn");
+        const result = document.getElementById("result");
+        let quoteLiked =[];
+
+        btnCharWithSpace.addEventListener("click", ev => {
+            ev.preventDefault();
+            result.textContent = `Total amount of characters, including every space: ${lastQuoteDisplayed.length}`
+            result.style.visibility = "visible";
+        });
+        btnCharNoSpace.addEventListener("click", ev => {
+            ev.preventDefault();
+            result.textContent = `Total amount of characters, without any space: ${lastQuoteDisplayed.replaceAll(" ", "").length}`
+            result.style.visibility = "visible";
+        });
+        numbWords.addEventListener("click", ev => {
+            ev.preventDefault();
+            onlyWords = lastQuoteDisplayed.trim().split(" ");
+            result.textContent = `Total amount of words: ${lastQuoteDisplayed.trim().split(" ").length}`
+            result.style.visibility = "visible";
+        });
+        likeBtn.addEventListener("click", ev => {
+            ev.preventDefault();
+            quoteLiked.push(lastIdQuoteDisplayed);
+            likeSymb.style.display = "flex";
+            
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>
