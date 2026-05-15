@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="starwars.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop playsinline id="background-video" class="videoBackground">
+        <source src="https://res.cloudinary.com/dcsssn1gt/video/upload/v1778777580/12900818_3840_2160_25fps_m2moqn.mp4" type="video/mp4">
+    </video>
+
+    <main class="main" id="main">
+        <img src="https://res.cloudinary.com/dcsssn1gt/image/upload/v1778778133/602175e40ad3230004b93c20_ce1bac.png" class="StarWarsLogo">
+        <div class="panelcontainer" id="panelContainer">
+            <div class="resultPanel" id="resultPanel">
+                <p class="nameDisplayed" id="name">Luke Skywalker</p>
+                <div class="displayedRow">
+                <span class="label">Gender:</span>
+                <p class="responseDisplayed" id="gender">Male</p>
+                </div>
+                <div class="displayedRow">
+                <span class="label">Height:</span>
+                <p class="responseDisplayed" id="height">183 cm</p>
+                </div>
+                <div class="displayedRow">
+                <span class="label">Birth Year:</span>
+                <p class="responseDisplayed" id="birthYear">1981</p>
+                </div>
+                <div class="displayedRow">
+                <span class="label">Eyes color:</span>
+                <p class="responseDisplayed" id="eyesColor">Blue</p>
+                </div>
+                <div class="displayedRow">
+                <span class="label">Hair color:</span>
+                <p class="responseDisplayed" id="hairColor">Yellow</p>
+                </div>
+            </div>
+            <div class="loadPanel" id="loadPanel">
+                <dotlottie-player
+                  src="https://lottie.host/f31e95b7-6140-459c-8fed-4df75148aa30/Ti8YIybB8d.lottie"
+                  background="transparent"
+                  speed="1"
+                  style="width: 120px; height: 120px;"
+                  loop
+                  autoplay>
+               </dotlottie-player>
+               <p class="loading">Loading...</p>
+           </div>
+        </div>
+        <button type="button" id="btnChoose" class="btnChoose">Find Someone</button>
+    </main>
+
+
+    <script src="starwars.js"></script>
+
+</body>
+</html>
