@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="pokedex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Dots&display=swap" rel="stylesheet">
+    <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"
+        type="module"
+    ></script>
+</head>
+<body>
+    <div class="containerLogo" id="containerLogo">
+        <img src="https://res.cloudinary.com/dcsssn1gt/image/upload/v1778873698/logo_h9feuo.png" class="pokeLogo">
+    </div>
+    <div class="main" id="main">
+        <div class="containerDevice" id="containerDevice">
+            <div class="blocImage" id="blocImage">
+                <img src="https://res.cloudinary.com/dcsssn1gt/image/upload/v1778909892/wallpapersden.com_pokemon-pikachu-art_1920x1080_foa6lv.jpg" class="pokeImage" id="pokeImage">
+            </div>
+            <div class="loadingScreenImage" id="loadingScreenImage">
+                <dotlottie-wc
+                    src="https://lottie.host/d52d175b-62dc-4a68-85cd-e9319740a9fc/WWzmRWXE1x.lottie"
+                    style="width: 150px; height: 150px"
+                    autoplay
+                    loop
+                ></dotlottie-wc>
+                <p class="caracteristicLoading">Loading...</p>
+            </div>
+            <button type="button" class="btnLeft" id="btnLeft"></button>
+            <button type="button" class="btnRight" id="btnRight"></button>
+            <button type="button" class="btnPress" id="btnPress"></button>
+            <div class="blocInfos" id="blocInfos">
+                <h1 class="titlePok" id="titlePoke">Pokemon name</h1>
+                <div class="pokeNumber">
+                <p class="caracteristicNum">Pokemon Nº</p>
+                <p class="caracteristicNum" id="pokeNum"></p>
+                </div>
+                <div class="rowstat">
+                   <p class="textCaracL">HP:</p>
+                   <p class="caracteristic" id="pokeHP">10</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">Type:</p>
+                  <p class="caracteristic" id="pokeType">electric</p>
+                </div>
+                 <div class="rowstat">
+                  <p class="textCaracL">Att:</p>
+                  <p class="caracteristic" id="pokeAttack">5</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">Wt:</p>
+                  <p class="caracteristic" id="pokeWeight">22kg</p>
+                </div>
+                 <div class="rowstat">
+                  <p class="textCaracL">Def:</p>
+                  <p class="caracteristic" id="pokeDefense">7</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">Ht:</p>
+                  <p class="caracteristic" id="pokeHeight">183cm</p>
+                </div>
+                 <div class="rowstat">
+                  <p class="textCaracL">SP Att:</p>
+                  <p class="caracteristic" id="pokeSpecialAttack">10</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">Abl:</p>
+                  <p class="caracteristic" id="pokeAbility">Thunder</p>
+                </div>
+                 <div class="rowstat">
+                  <p class="textCaracL">SP Def:</p>
+                  <p class="caracteristic" id="pokeSpecialDefense">10</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">Moves:</p>
+                  <p class="caracteristic" id="pokeMoveAmount">The good</p>
+                </div>
+                 <div class="rowstat">
+                  <p class="textCaracL">Speed:</p>
+                  <p class="caracteristic" id="pokeSpeed">10</p>
+                <p class="separator">|</p>
+                  <p class="textCaracD">XP:</p>
+                  <p class="caracteristic" id="pokeBaseXp">32</p>
+                </div>
+            </div>
+            <div class="loadingScreenInfos" id="loadingScreenInfos">
+                <dotlottie-wc
+                   src="https://lottie.host/ca14782a-be06-48a3-ac80-965e926284a6/BmlvOh3kzc.lottie"
+                   style="width: 110px; height: 110px"
+                   autoplay
+                   loop
+                ></dotlottie-wc>
+               <p class="caracteristicNum">Loading...</p>
+            </div>
+            <div class="blockInfoStart" id="blockInfoStart">
+                <p class="instrPok">PRESS THE GREEN BUTTON TO GET A POKEMON</p>
+            </div>
+
+        </div>
+        <div class="instruction" id="instruction">
+            <h1 class="title">How it works?</h1>
+            <div class="bulle">
+            <p class="textInstruction">1. Press the green button to get a random Pokemon</p>
+            <p class="textInstruction">2. Press the left and right to see previous and next Pokemon</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="pokedex.js"></script>
+</body>
+</html>
