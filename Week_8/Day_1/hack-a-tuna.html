@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hack-a-tuna.css">
+    <title>Hack-a-Tuna</title>
+</head>
+<body>
+    <!-- SIDE MENU ------------------------------------------------------------------------------>
+    <section class="sideBar" id="sideBar">
+        <img class="logoTuna" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780220271/Hacl-a-Tuna-logo_jhkadf.webp">
+        <div class="containerLevel">
+            <img class="levelLogo" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780221099/logo-tuna-roockie_bx7oq1.webp">
+            <div class="levelColonne2">
+                <p class="currentStatut">Tuna Rookie</p>
+                <p class="currentLevel">Level 4</p>
+                <div class="containerBarLevel">
+                    <div class="levelBar" id="levelbar"></div>
+                    <p class="currentPoints" id="currentPoints">320</p>
+                    /<p class="totalLevelPoints" id="totalLevelPoints">600</p>
+                    <p>XP</p>
+                </div>
+            </div>
+        </div>
+        <nav class="sideMenu">
+            <a href="#" class="menuItem active">
+                <span class="menuIcon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">📋</span>
+                <span>Tasks</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">🔥</span>
+                <span>Daily Challenges</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">⌨️</span>
+                <span>Endless Challenges</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">🏆</span>
+                <span>Achievements</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">📊</span>
+                <span>Stats</span>
+            </a>
+            <a href="#" class="menuItem">
+                <span class="menuIcon">⚙️</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+        <div class="tunaStatusCard">
+            <p class="statusLabel">TUNA STATUS</p>
+            <h2 class="statusTitle">Falling Behind</h2>
+            <img class="fallingTunaImg" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780222310/falling-tuna_hbp6w8.webp" alt="Falling behind tuna">
+            <div class="freshnessRow">
+                <span>Freshness</span>
+                <strong>42%</strong>
+            </div>
+            <div class="freshnessTrack">
+                <div class="freshnessFill"></div>
+            </div>
+            <p class="statusText">Complete your tasks before time runs out!</p>
+        </div>
+    </section>
+ <!-- MAIN SECTION ------------------------------------------------------------------------------>
+    <section class="main" id="main">
+        <header class="topBar">
+            <div></div>
+            <div class="topButtons">
+                <div class="streakBadge">
+                    <span>🔥</span>
+                    <div>
+                        <strong class="strong7">7</strong>
+                        <small>day streak</small>
+                    </div>
+                </div>
+                <button class="iconButton">🔔</button>
+                <button class="userAvatar">T</button>
+            </div>
+        </header>
+        <section class="heroBanner">
+            <div class="heroText">
+                <span class="heroLabel">Daily coding survival</span>
+                <h1>Save your tuna before it turns into sushi!</h1>
+                <p>Complete your tasks, finish your daily challenges, and keep your coding streak fresh.</p>
+                <button class="heroButton">Start today's missions</button>
+            </div>
+        </section>
+ <!-- TASK LIST ------------------------------------------------------------------------------>
+        <section class="dashboardGrid">
+            <div class="dashboardCard taskListCard">
+                <div class="taskCardHeader">
+                    <div class="taskTitleGroup">
+                        <span class="taskHeaderIcon">▦</span>
+                        <h2>TASK LIST</h2>
+                    </div>
+                    <a href="#" class="viewTasksLink">View all tasks →</a>
+                </div>
+
+                <div class="taskInputBar">
+                    <span>Add a new task...</span>
+                    <button class="addTaskCircle">+</button>
+                </div>
+
+                <div class="taskList">
+                    <div class="taskItem taskPendingOnTime">
+                        <button class="taskCheckbox"></button>
+                        <h3 class="taskName">Finish Auth System</h3>
+                        <span class="taskTag">Backend</span>
+                        <span class="taskTime warningTime">⏱ 2h 15m left</span>
+                        <img class="taskTunaIcon" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780229058/Tuna-Task-state1_doz998.webp" alt="Task pending in good timing">
+                    </div>
+
+                    <div class="taskItem completedTask taskDoneOnTime">
+                        <button class="taskCheckbox checked">✓</button>
+                        <h3 class="taskName">Design Landing Page</h3>
+                        <span class="taskTag">Frontend</span>
+                        <span class="taskTime completedTime">Completed</span>
+                        <img class="taskTunaIcon" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780229059/Tuna-Winner_hvse54.webp" alt="Task done in time">
+                    </div>
+
+                    <div class="taskItem taskPendingClose">
+                        <button class="taskCheckbox"></button>
+                        <h3 class="taskName">Fix API Bug</h3>
+                        <span class="taskTag">Debug</span>
+                        <span class="taskTime warningTime">⏱ 45m left</span>
+                        <img class="taskTunaIcon" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780229056/Tuna-Task-state2_kmgdjr.webp" alt="Task pending close to delivery time">
+                    </div>
+
+                    <div class="taskItem taskDoneLate">
+                        <button class="taskCheckbox"></button>
+                        <h3 class="taskName">Write Unit Tests</h3>
+                        <span class="taskTag">Testing</span>
+                        <span class="taskTime warningTime">⏱ +1h 30m late</span>
+                        <img class="taskTunaIcon" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780229056/Tuna-Task-state3_emfq6o.webp" alt="Task pending with delay passed">
+                    </div>
+
+                    <div class="taskAlert taskPendingLate ">
+                        <span class="alertIcon">🍣</span>
+                        <div>
+                            <h3>Uh oh! Some tasks are getting late...</h3>
+                            <p>Don’t let your tuna turn into sushi! 🍣</p>
+                        </div>
+                        <span class="alertArrow">›</span>
+                    </div>
+                </div>
+            </div>
+
+
+ <!-- DAILY CHALLENGE ------------------------------------------------------------------------------>
+            <div class="dashboardCard dailyCard">
+                <div class="dailyTopHeader">
+                    <div class="dailyTitleGroup">
+                        <span class="dailyIcon">▣</span>
+                        <h2>DAILY CHALLENGES</h2>
+                    </div>
+                    <p class="dailyReset">New challenges in <strong>14:32:10</strong></p>
+                </div>
+
+                <div class="dailyIntroBox">
+                    <div>
+                        <h3>3 challenges every day to boost your skills!</h3>
+                        <p>Complete all 3 to earn bonus XP 🎉</p>
+                    </div>
+                    <img class="dailyWinnerIcon" src="https://res.cloudinary.com/dfsdomppx/image/upload/v1780229059/Tuna-Winner_hvse54.webp" alt="Daily challenge winner tuna">
+                </div>
+
+                <div class="dailyChallengeList">
+                    <div class="dailyChallengeRow">
+                        <div class="dailyNumber">1</div>
+                        <div class="dailyChallengeInfo">
+                            <div class="dailyChallengeTitleLine">
+                                <h3>Reverse a String</h3>
+                                <span class="difficultyBadge easyBadge">Easy</span>
+                                <span class="languageBadge">Python</span>
+                            </div>
+                            <p>Write a function that reverses a string.</p>
+                        </div>
+                        <div class="dailyProgressBox">
+                            <strong>0/1</strong>
+                            <span>Completed</span>
+                            <em>+50 XP</em>
+                        </div>
+                    </div>
+
+                    <div class="dailyChallengeRow">
+                        <div class="dailyNumber">2</div>
+                        <div class="dailyChallengeInfo">
+                            <div class="dailyChallengeTitleLine">
+                                <h3>Two Sum</h3>
+                                <span class="difficultyBadge mediumBadge">Medium</span>
+                                <span class="languageBadge">JavaScript</span>
+                            </div>
+                            <p>Find two numbers that add up to target.</p>
+                        </div>
+                        <div class="dailyProgressBox">
+                            <strong>0/1</strong>
+                            <span>Completed</span>
+                            <em>+75 XP</em>
+                        </div>
+                    </div>
+
+                    <div class="dailyChallengeRow">
+                        <div class="dailyNumber">3</div>
+                        <div class="dailyChallengeInfo">
+                            <div class="dailyChallengeTitleLine">
+                                <h3>Valid Palindrome</h3>
+                                <span class="difficultyBadge easyBadge">Easy</span>
+                                <span class="languageBadge">TypeScript</span>
+                            </div>
+                            <p>Check if a string is a palindrome.</p>
+                        </div>
+                        <div class="dailyProgressBox">
+                            <strong>0/1</strong>
+                            <span>Completed</span>
+                            <em>+50 XP</em>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="dailyMainButton">&lt;/&gt; Go to Daily Challenges →</button>
+            </div>
+        </section>
+
+
+
+ <!-- ENDLESS CHALLENGE ------------------------------------------------------------------------------>
+        <section class="dashboardCard endlessCard">
+            <div class="cardHeader">
+                <div>
+                    <p class="sectionLabel">∞ ENDLESS CHALLENGES</p>
+                    <h2>Practice More, Save More Tuna</h2>
+                </div>
+            </div>
+            <!-- FILTERS FOR CHALLENGE ------------------------------------------------------------------------------>
+            <div class="endlessFilters">
+                <select class="filterSelect" id="languageFilter">
+                    <option value="All">All Languages</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                    <option value="Python">Python</option>
+                    <option value="Node.js">Node.js</option>
+                    <option value="React">React</option>
+                </select>
+                <select class="filterSelect" id="topicFilter">
+                    <option value="All">All Topics</option>
+                    <option value="Math / Numbers">Math / Numbers</option>
+                    <option value="Code / Algorithms">Code / Algorithms</option>
+                    <option value="Strings / Stream">Strings / Stream</option>
+                    <option value="Arrays / Lists">Arrays / Lists</option>
+                    <option value="Objects / HashMap">Objects / HashMap</option>
+                    <option value="API / Fetch">API / Fetch</option>
+                    <option value="Async / Promises">Async / Promises</option>
+                    <option value="Debug / Bugs">Debug / Bugs</option>
+                    <option value="DOM / UI">DOM / UI</option>
+                </select>
+                <select class="filterSelect" id="difficultyFilter">
+                    <option value="All">All Levels</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                    <option value="Expert">Expert</option>
+                </select>
+
+                <button class="generateChallengeButton" id="btnGenerateChallenge">✦ Generate Challenge</button>
+            </div>
+
+            <!-- DISPLAYING CHALLENGE ------------------------------------------------------------------------------>
+            <div class="endlessGrid">
+
+            </div>
+        
+        </section>
+            <!-- CHALLENGE WORKSPACE ------------------------------------------------------------------------------>
+        <section class="challengeWorkspace hidden" id="challengeWorkspace">
+            <button class="backToChallengesBtn" id="backToChallengesBtn">← Back to challenges</button>
+
+            <div class="workspaceHeader">
+                <div>
+                    <p class="workspaceMeta" id="workspaceMeta">Category · Language · Difficulty</p>
+                    <h2 class="workspaceTitle" id="workspaceTitle">Challenge Title</h2>
+                    <p class="workspaceDescription" id="workspaceDescription">Challenge description will appear here.</p>
+                </div>
+                <div class="workspaceXp" id="workspaceXp">+0 XP</div>
+            </div>
+
+            <div class="workspaceGrid">
+                <div class="workspacePanel workspaceInstructions">
+                    <h3>Instructions</h3>
+                    <ul id="workspaceInstructionsList"></ul>
+
+                    <h3>Concepts</h3>
+                    <div class="workspaceConcepts" id="workspaceConcepts"></div>
+
+                    <h3>Test Cases</h3>
+                    <div class="workspaceTestCases" id="workspaceTestCases"></div>
+                </div>
+
+                <div class="workspacePanel workspaceEditorPanel">
+                    <div class="editorTopLine">
+                        <h3>Code Editor</h3>
+                        <span id="workspaceLanguageBadge" class="languageBadge">JavaScript</span>
+                    </div>
+
+                    <textarea class="codeEditor" id="codeEditor"></textarea>
+
+                    <div class="workspaceActions">
+                        <button class="runCodeBtn" id="runCodeBtn">Run Code</button>
+                        <button class="submitChallengeBtn" id="submitChallengeBtn">Submit Challenge</button>
+                    </div>
+
+                    <div class="consoleOutput" id="consoleOutput">No output yet.</div>
+                </div>
+            </div>
+        </section>
+
+</section>
+    <script src="hack-a-tuna.js"></script>
+</body>
+</html>

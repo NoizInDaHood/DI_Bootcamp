@@ -1,0 +1,1156 @@
+body {
+    margin:0px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background: #071827;
+}
+.sideBar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #082033 0%, #061320 100%);
+    border-right: 1px solid rgba(82, 240, 222, 0.18);
+
+}
+.main {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(82, 240, 222, 0.18), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(255, 138, 76, 0.16), transparent 35%),
+        linear-gradient(135deg, #0b2135 0%, #081827 55%, #06111d 100%);
+
+}
+.topBar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 32px 0;
+}
+.topButtons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.streakBadge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1px solid rgba(82, 240, 222, 0.18);
+    border-radius: 999px;
+    background: rgba(8, 32, 51, 0.72);
+    color: white;
+}
+.strong7 {
+    color:rgb(244, 163, 87);
+}
+.streakBadge strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1;
+}
+.streakBadge small {
+    display: block;
+    font-size: 11px;
+    color: #9fb8d0;
+}
+.iconButton,
+.userAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(82, 240, 222, 0.18);
+    background: rgba(8, 32, 51, 0.72);
+    color: white;
+    cursor: pointer;
+}
+.userAvatar {
+    background: #f43f6f;
+    font-weight: 800;
+}
+.heroBanner {
+    background: url("https://res.cloudinary.com/dfsdomppx/image/upload/v1780212667/imagesave_tasamb.webp") center / cover no-repeat;
+    height: 385px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    color: white;
+    margin: 10px 10px;
+    overflow: hidden;
+    border: 2px solid rgba(245, 245, 245, 0.314);
+    border-radius: 32px;
+    background:
+        url("https://res.cloudinary.com/dfsdomppx/image/upload/v1780212667/imagesave_tasamb.webp") center / cover no-repeat;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+.heroText {
+    padding: 42px;
+    max-width: 620px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.heroLabel {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    border: 1px solid rgba(82, 240, 222, 0.28);
+    border-radius: 999px;
+    background: rgba(82, 240, 222, 0.1);
+    color: #52f0de;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+.heroText h1 {
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+    font-size: 48px;
+    line-height: 1.02;
+    max-width: 560px;
+}
+.heroText p {
+    margin: 18px 0 0;
+    max-width: 470px;
+    color: #b8ccdf;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.heroButton {
+    margin-top: 26px;
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #52f0de, #73ffd3);
+    color: #061320;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgba(82, 240, 222, 0.22);
+}
+.logoTuna {
+    display: block;
+    width: 220px;
+    margin: 26px auto 28px;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+}
+.containerLevel {
+    width: calc(100% - 24px);
+    margin: 0 auto 28px;
+    padding: 7px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(82, 240, 222, 0.18);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.levelLogo {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+.levelColonne2 {
+    flex: 1;
+}
+.currentStatut {
+    margin: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.currentLevel {
+    margin: 4px 0 8px;
+    color: #9fb8d0;
+    font-size: 12px;
+}
+.containerBarLevel {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #9fb8d0;
+    font-size: 11px;
+}
+.levelBar {
+    width: 82px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1d6cff 0%, #52f0de 55%, rgba(255, 255, 255, 0.12) 55%);
+}
+.sideMenu {
+    width: calc(100% - 24px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.menuItem {
+    min-height: 46px;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 14px;
+    color: #d8e7f5;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.menuIcon {
+    width: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    line-height: 1;
+}
+.menuItem:hover {
+    background: rgba(82, 240, 222, 0.08);
+    color: white;
+    transform: translateX(3px);
+}
+.menuItem.active {
+    background: linear-gradient(135deg, #0f6bff 0%, #0051ff 100%);
+    color: white;
+    box-shadow: 0 14px 28px rgba(0, 81, 255, 0.28);
+}
+.menuItem.active .menuIcon {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.45));
+}
+
+.tunaStatusCard {
+    width: calc(100% - 24px);
+    margin: 10px auto 0;
+    padding: 18px;
+    box-sizing: border-box;
+    border: 1px solid rgba(82, 240, 222, 0.2);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.05),
+        0 18px 40px rgba(0, 0, 0, 0.16);
+}
+
+.statusLabel {
+    margin: 0 0 6px;
+    color: #9fb8d0;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+.statusTitle {
+    margin: 0;
+    color: #ffb13d;
+    font-size: 18px;
+    font-weight: 800;
+}
+.fallingTunaImg {
+    display: block;
+    width: 138px;
+    margin: 0px auto 14px;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.28));
+}
+.freshnessRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+.freshnessRow strong {
+    color: #ffb13d;
+    font-size: 14px;
+}
+.freshnessTrack {
+    width: 100%;
+    height: 9px;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+}
+.freshnessFill {
+    width: 42%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #2ef2a5 0%, #ffc247 62%, #ff4d5f 100%);
+}
+.statusText {
+    margin: 14px 0 0;
+    color: #d8e7f5;
+    font-size: 12px;
+    line-height: 1.45;
+}
+.dashboardGrid {
+    margin: 22px 24px 0;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 22px;
+}
+.dashboardCard {
+    border: 1px solid rgba(82, 240, 222, 0.16);
+    border-radius: 24px;
+    background: rgba(8, 32, 51, 0.72);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(14px);
+}
+.taskListCard,
+.dailyCard {
+    padding: 22px;
+}
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+.sectionLabel {
+    margin: 0 0 6px;
+    color: #52f0de;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+.cardHeader h2 {
+    margin: 0;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-size: 25px;
+    line-height: 1;
+}
+.smallActionButton {
+    border: 1px solid rgba(82, 240, 222, 0.24);
+    border-radius: 999px;
+    padding: 10px 14px;
+    background: rgba(82, 240, 222, 0.1);
+    color: #52f0de;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.taskList,
+.challengeStack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.taskItem {
+    min-height: 68px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.045);
+}
+.taskItem.urgent {
+    border-color: rgba(255, 77, 95, 0.32);
+    background: rgba(255, 77, 95, 0.08);
+}
+.taskItem.warning {
+    border-color: rgba(255, 177, 61, 0.3);
+    background: rgba(255, 177, 61, 0.07);
+}
+.taskCheck {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    border-radius: 14px;
+    background: rgba(82, 240, 222, 0.12);
+    color: #52f0de;
+    font-weight: 900;
+}
+
+.taskContent {
+    flex: 1;
+}
+.taskContent h3,
+.challengeItem h3,
+.endlessItem h3 {
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+.taskContent p,
+.challengeItem p,
+.endlessItem p {
+    margin: 5px 0 0;
+    color: #9fb8d0;
+    font-size: 12px;
+    line-height: 1.35;
+}
+.taskBadge {
+    padding: 6px 9px;
+    border-radius: 999px;
+    background: rgba(255, 177, 61, 0.14);
+    color: #ffb13d;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.taskBadge.safe {
+    background: rgba(46, 242, 165, 0.14);
+    color: #2ef2a5;
+}
+.dailyCounter {
+    padding: 9px 12px;
+    border-radius: 999px;
+    background: rgba(15, 107, 255, 0.18);
+    color: #d8e7f5;
+    font-size: 12px;
+    font-weight: 800;
+}
+.challengeItem {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.045);
+}
+.challengeItem.completed {
+    border-color: rgba(46, 242, 165, 0.26);
+}
+.activeChallenge {
+    border-color: rgba(82, 240, 222, 0.34);
+    background: rgba(82, 240, 222, 0.08);
+}
+.lockedChallenge {
+    opacity: 0.72;
+}
+.challengeLevel {
+    display: inline-flex;
+    margin-bottom: 8px;
+    color: #52f0de;
+    font-size: 11px;
+    font-weight: 800;
+}
+.endlessCard {
+    margin: 22px 24px 32px;
+    padding: 18px;
+}
+.endlessGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+.endlessItem {
+    min-height: 178px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px;
+    border: 1px solid rgba(82, 240, 222, 0.13);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.045);
+}
+.endlessIcon {
+    display: inline-flex;
+    margin-bottom: 14px;
+    font-size: 28px;
+}
+.endlessFilters {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: -52px 0 14px;
+}
+.filterSelect {
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid rgba(82, 240, 222, 0.16);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.035);
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.generateChallengeButton {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid rgba(82, 240, 222, 0.18);
+    border-radius: 10px;
+    background: #0f6bff;
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.generateChallengeButton:hover {
+    border-color: rgba(82, 240, 222, 0.38);
+    background: rgba(15, 107, 255, 0.18);
+}
+.endlessIconImg {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.28);
+}
+.endlessContent {
+    min-width: 0;
+}
+.endlessBadges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.endlessContent h3 {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+.endlessContent p {
+    margin: 7px 0 0;
+    color: #9fb8d0;
+    font-size: 12px;
+    line-height: 1.35;
+}
+.endlessMeta {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: #9fb8d0;
+    font-size: 11px;
+}
+.startChallengeBtn {
+    width: 100%;
+    height: 34px;
+    margin-top: 12px;
+    border: 1px solid #0f6bff;
+    border-radius: 8px;
+    background: transparent;
+    color: #1d8bff;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.hardBadge {
+    background: rgba(255, 77, 95, 0.16);
+    color: #ff6c7b;
+}
+.taskListCard {
+    padding: 18px;
+}
+.taskCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.taskTitleGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.taskHeaderIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+.taskCardHeader h2 {
+    margin: 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+.viewTasksLink {
+    color: #1d8bff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+.taskInputBar {
+    height: 48px;
+    margin-bottom: 14px;
+    padding: 0 12px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(82, 240, 222, 0.16);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+    color: #9fb8d0;
+    font-size: 14px;
+}
+.addTaskCircle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: white;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+.taskList {
+    gap: 10px;
+}
+.taskItem {
+    min-height: 56px;
+    padding: 10px 40px 10px 12px;
+    display: grid;
+    grid-template-columns: 30px 1fr auto auto 42px;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(82, 240, 222, 0.13);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+}
+.taskCheckbox {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    border: 1px solid rgba(159, 184, 208, 0.45);
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.taskCheckbox.checked {
+    border-color: transparent;
+    background: #29c779;
+}
+.taskName {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+}
+.taskTag {
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: rgba(159, 184, 208, 0.11);
+    color: #d8e7f5;
+    font-size: 11px;
+    font-weight: 700;
+}
+.taskTime {
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+.taskPendingOnTime {
+    border-color: rgba(82, 180, 255, 0.38);
+    background: linear-gradient(90deg, rgba(82, 180, 255, 0.18), rgba(82, 240, 222, 0.07));
+}
+.taskPendingClose {
+    border-color: rgba(255, 148, 31, 0.38);
+    background: linear-gradient(90deg, rgba(255, 148, 31, 0.18), rgba(255, 177, 61, 0.07));
+}
+.taskPendingLate {
+    border-color: rgba(255, 77, 95, 0.42);
+    background: linear-gradient(90deg, rgba(255, 77, 95, 0.2), rgba(255, 77, 95, 0.07));
+}
+.taskDoneOnTime {
+    border-color: rgba(46, 242, 165, 0.36);
+    background: linear-gradient(90deg, rgba(46, 242, 165, 0.17), rgba(82, 240, 222, 0.07));
+}
+.taskDoneLate {
+    border-color: rgba(248, 194, 194, 0.36);
+    background: linear-gradient(90deg, rgba(255, 61, 61, 0.369), rgba(255, 77, 95, 0.06));
+}
+.warningTime {
+    color: #ff941f;
+}
+.completedTime {
+    color: #2ef2a5;
+}
+.taskTunaIcon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.25));
+}
+.taskAlert {
+    min-height: 56px;
+    padding: 10px 14px;
+    display: grid;
+    grid-template-columns: 36px 1fr 18px;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 77, 95, 0.42);
+    border-radius: 13px;
+    background: linear-gradient(90deg, rgba(255, 77, 95, 0.18), rgba(255, 77, 95, 0.08));
+}
+.alertIcon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+}
+.taskAlert h3 {
+    margin: 0;
+    color: #ff6c7b;
+    font-size: 14px;
+    font-weight: 800;
+}
+.taskAlert p {
+    margin: 3px 0 0;
+    color: #ffd0d6;
+    font-size: 12px;
+}
+.alertArrow {
+    color: #ff6c7b;
+    font-size: 28px;
+    line-height: 1;
+}
+.dailyHeaderRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.dailyWinnerIcon {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.28));
+}
+
+/* Daily challenges mockup style */
+.dailyCard {
+    padding: 18px;
+}
+.dailyTopHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.dailyTitleGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.dailyIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 17px;
+}
+.dailyTopHeader h2 {
+    margin: 0;
+    color: white;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+.dailyReset {
+    margin: 0;
+    color: #9fb8d0;
+    font-size: 12px;
+}
+.dailyReset strong {
+    color: white;
+}
+.dailyIntroBox {
+    min-height: 64px;
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border: 1px solid rgba(82, 240, 222, 0.12);
+    border-radius: 13px;
+    background: linear-gradient(90deg, rgba(82, 180, 255, 0.11), rgba(82, 240, 222, 0.05));
+}
+.dailyIntroBox h3 {
+    margin: 0 0 6px;
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+}
+.dailyIntroBox p {
+    margin: 0;
+    color: #d8e7f5;
+    font-size: 12px;
+}
+.dailyIntroBox .dailyWinnerIcon {
+    width: 62px;
+    height: 62px;
+    flex: 0 0 62px;
+}
+.dailyChallengeList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dailyChallengeRow {
+    min-height: 68px;
+    padding: 11px 14px;
+    display: grid;
+    grid-template-columns: 38px 1fr 96px;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(82, 240, 222, 0.13);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+}
+.dailyNumber {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0f6bff 0%, #0051ff 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    box-shadow: 0 10px 20px rgba(0, 81, 255, 0.28);
+}
+.dailyChallengeInfo {
+    min-width: 0;
+}
+.dailyChallengeTitleLine {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.dailyChallengeTitleLine h3 {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+}
+.dailyChallengeInfo p {
+    margin: 6px 0 0;
+    color: #9fb8d0;
+    font-size: 12px;
+}
+.difficultyBadge,
+.languageBadge {
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1;
+}
+.easyBadge {
+    background: rgba(46, 242, 165, 0.12);
+    color: #2ef2a5;
+}
+.mediumBadge {
+    background: rgba(255, 177, 61, 0.14);
+    color: #ffb13d;
+}
+.expertBadge {
+    background: rgba(168, 85, 247, 0.18);
+    color: #c084fc;
+
+}
+.languageBadge {
+    background: rgba(29, 107, 255, 0.16);
+    color: #9ec7ff;
+}
+.dailyProgressBox {
+    min-height: 52px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgba(159, 184, 208, 0.26);
+    text-align: center;
+}
+.dailyProgressBox strong {
+    color: white;
+    font-size: 13px;
+    line-height: 1.1;
+}
+.dailyProgressBox span {
+    margin-top: 3px;
+    color: #9fb8d0;
+    font-size: 11px;
+}
+.dailyProgressBox em {
+    margin-top: 4px;
+    color: #1d8bff;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 800;
+}
+.dailyMainButton {
+    width: 100%;
+    height: 44px;
+    margin-top: 12px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0f6bff 0%, #0051ff 100%);
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0, 81, 255, 0.24);
+}
+.endlessItem {
+    position: relative;
+}
+.endlessVisualColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.deleteChallengeBtn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 77, 95, 0.42);
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 77, 95, 0.22), rgba(255, 119, 62, 0.18));
+    color: #ff6c7b;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow:
+        0 14px 26px rgba(255, 77, 95, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        color 0.18s ease;
+}
+.deleteChallengeBtn:hover {
+    transform: translateY(-2px) scale(1.04);
+    background: linear-gradient(135deg, rgba(255, 77, 95, 0.34), rgba(255, 119, 62, 0.28));
+    border-color: rgba(255, 77, 95, 0.7);
+    color: #ff8a96;
+    box-shadow:
+        0 18px 34px rgba(255, 77, 95, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+.deleteChallengeBtn:active {
+    transform: translateY(1px) scale(0.96);
+}
+.hidden {
+    display: none !important;
+}
+.challengeWorkspace {
+    margin: 22px 24px 32px;
+    padding: 22px;
+    border: 1px solid rgba(82, 240, 222, 0.16);
+    border-radius: 24px;
+    background: rgba(8, 32, 51, 0.78);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(14px);
+}
+.backToChallengesBtn {
+    height: 38px;
+    margin-bottom: 18px;
+    padding: 0 16px;
+    border: 1px solid rgba(82, 240, 222, 0.22);
+    border-radius: 999px;
+    background: rgba(82, 240, 222, 0.08);
+    color: #52f0de;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.workspaceHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 22px;
+}
+.workspaceMeta {
+    margin: 0 0 8px;
+    color: #52f0de;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.workspaceTitle {
+    margin: 0;
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-size: 34px;
+    line-height: 1;
+}
+.workspaceDescription {
+    max-width: 760px;
+    margin: 12px 0 0;
+    color: #b8ccdf;
+    font-size: 15px;
+    line-height: 1.55;
+}
+.workspaceXp {
+    min-width: 86px;
+    padding: 12px 16px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #52f0de, #73ffd3);
+    color: #061320;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 14px 30px rgba(82, 240, 222, 0.2);
+}
+.workspaceGrid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 18px;
+}
+.workspacePanel {
+    padding: 18px;
+    border: 1px solid rgba(82, 240, 222, 0.13);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.045);
+}
+.workspacePanel h3 {
+    margin: 0 0 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+}
+.workspaceInstructions ul {
+    margin: 0 0 20px;
+    padding-left: 20px;
+    color: #d8e7f5;
+    font-size: 13px;
+    line-height: 1.55;
+}
+.workspaceConcepts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.conceptPill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    min-width: unset;
+    min-height: unset;
+    white-space: nowrap;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: rgba(82, 240, 222, 0.1);
+    color: #52f0de;
+    font-size: 12px;
+    font-weight: 800;
+}
+.workspaceTestCases {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.testCaseBox {
+    padding: 10px;
+    border: 1px solid rgba(159, 184, 208, 0.18);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.16);
+    color: #d8e7f5;
+    font-size: 12px;
+    line-height: 1.45;
+}
+.editorTopLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.editorTopLine h3 {
+    margin: 0;
+}
+.codeEditor {
+    width: 100%;
+    min-height: 360px;
+    padding: 16px;
+    box-sizing: border-box;
+    resize: vertical;
+    border: 1px solid rgba(82, 240, 222, 0.18);
+    border-radius: 14px;
+    outline: none;
+    background: #06111d;
+    color: #d8e7f5;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.codeEditor:focus {
+    border-color: rgba(82, 240, 222, 0.45);
+    box-shadow: 0 0 0 3px rgba(82, 240, 222, 0.08);
+}
+.workspaceActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 14px;
+}
+.runCodeBtn,
+.submitChallengeBtn {
+    height: 40px;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.runCodeBtn {
+    border: 1px solid rgba(82, 240, 222, 0.22);
+    background: transparent;
+    color: #52f0de;
+}
+.submitChallengeBtn {
+    border: 0;
+    background: linear-gradient(135deg, #0f6bff 0%, #0051ff 100%);
+    color: white;
+    box-shadow: 0 14px 28px rgba(0, 81, 255, 0.24);
+}
+.consoleOutput {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    min-height: 54px;
+    margin-top: 14px;
+    padding: 12px;
+    border: 1px solid rgba(159, 184, 208, 0.16);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.22);
+    color: #9fb8d0;
+    font-family: monospace;
+    font-size: 13px;
+}

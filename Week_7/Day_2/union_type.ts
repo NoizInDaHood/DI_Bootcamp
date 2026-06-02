@@ -23,8 +23,4 @@ function validateUnionType(value: any, allowedTypes: string[]): boolean {
     return allowedTypes.includes(typeof value)
 }
 console.log(validateUnionType("Zion", ["string"])); // should return True
-console.log(validateUnionType(42, ["string"])); // should return False
-console.log(validateUnionType(42, ["number"])); // should return True
-console.log(validateUnionType(true, ["boolean"])); // should return True
-console.log(validateUnionType(false, ["number"])); // should return False
-
+console.log(validateUnionType(42, ["
