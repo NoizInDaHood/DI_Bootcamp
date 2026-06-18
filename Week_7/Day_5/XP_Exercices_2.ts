@@ -16,5 +16,4 @@ function describeValue(value:string|number): string {
     return `Unknown value`
 };
 console.log(describeValue(15));
-console.log(describeValue("15"));
-
+consol

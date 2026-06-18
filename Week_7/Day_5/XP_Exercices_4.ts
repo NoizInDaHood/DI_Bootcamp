@@ -12,10 +12,4 @@ function getFirstElement(arr: (number|string)[]): string {
 
 }
 
-const mixedArray1: (number | string)[] = ["hello", 42, "world"];
-const mixedArray2: (number | string)[] = ["TypeScript", 100, "test"];
-const mixedArray3: (number | string)[] = [6, "7", "eight"];
-
-console.log(getFirstElement(mixedArray1));
-console.log(getFirstElement(mixedArray2));
-console.log(getFirstElement(mixedArray3));
+const mixedArray1: (number | string)[
