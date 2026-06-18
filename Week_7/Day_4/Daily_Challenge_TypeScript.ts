@@ -45,4 +45,54 @@ class Library {
         this.books.push(book);
     }
 
-    pu
+    public getBookDetails(isbn: string): string {
+        const foundBook = this.books.find((book) => book.isbn === isbn);
+
+        if (!foundBook) {
+            return "Book not found";
+        }
+
+        return `Title: ${foundBook.title}, Author: ${foundBook.author}, ISBN: ${foundBook.isbn}, Published Year: ${foundBook.publishedYear}, Genre: ${foundBook.genre ?? "Not specified"}`;
+    }
+}
+
+class DigitalLibrary extends Library {
+    constructor(public readonly website: string) {
+        super();
+    }
+
+    public listBooks(): string[] {
+        return this.books.map((book) => book.title);
+    }
+}
+
+const digitalLibrary = new DigitalLibrary("https://mydigitallibrary.com");
+
+digitalLibrary.addBook({
+    title: "1984",
+    author: "George Orwell",
+    isbn: "123",
+    publishedYear: 1949,
+    genre: "Dystopian"
+});
+
+digitalLibrary.addBook({
+    title: "Dune",
+    author: "Frank Herbert",
+    isbn: "456",
+    publishedYear: 1965,
+    genre: "Science Fiction"
+});
+
+digitalLibrary.addBook({
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    isbn: "789",
+    publishedYear: 1937
+});
+
+console.log(digitalLibrary.getBookDetails("123"));
+console.log(digitalLibrary.getBookDetails("456"));
+console.log(digitalLibrary.getBookDetails("789"));
+
+console.log(digitalLibrary.listBooks());
