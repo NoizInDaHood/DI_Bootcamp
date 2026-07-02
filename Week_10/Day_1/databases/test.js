@@ -4,7 +4,7 @@ import { Pool } from "pg";
 const PGHOST='ep-curly-firefly-as6sbjx7-pooler.c-4.eu-central-1.aws.neon.tech'
 const PGDATABASE='neondb'
 const PGUSER='neondb_owner'
-const PGPASSWORD='npg_fW2Yjye1LOpD'
+const PGPASSWORD=PASSWORD
 const PGSSLMODE='require'
 const PGCHANNELBINDING='require'
 const PGPORT= "5432"
