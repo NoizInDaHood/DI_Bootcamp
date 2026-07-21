@@ -36,15 +36,15 @@ function App() {
           }}
         >
           <p
-            style={{
+          style={{
               textAlign: "left",
               marginLeft: "10px",
             }}
-          >
+          >{language.votes}</p>
+          
+          <p>
             {language.name}
           </p>
-
-          <p>{language.votes}</p>
 
           <button
             onClick={() => {
